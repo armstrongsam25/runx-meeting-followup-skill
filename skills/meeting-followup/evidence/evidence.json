@@ -1,5 +1,6 @@
 {
   "bounty": 76,
+  "runx_cli_version": "runx-cli 0.6.16",
   "summary": "Published the meeting-followup runx skill to GitHub and the hosted registry, opened PR #249 against runxhq/runx, ran a dogfood invocation from the hosted registry that sealed successfully with 2 action items, verified the receipt, and assembled full evidence for Frantic bounty #76.",
   "observations": [
     "The skill was published to the hosted runx registry at armstrongsam25/meeting-followup with version sha-b66fb56c9dfe and harness status passed (2/2 cases).",
