@@ -1,0 +1,73 @@
+{
+  "bounty": 76,
+  "skill_id": "armstrongsam25/meeting-followup",
+  "version": "sha-b66fb56c9dfe",
+  "page_url": "https://runx.ai/x/armstrongsam25/meeting-followup@sha-b66fb56c9dfe",
+  "harness": {
+    "status": "passed",
+    "case_count": 2,
+    "checks_passed": 2,
+    "checks_failed": 0,
+    "declared_cases": [
+      {
+        "name": "sealed_action_items_extracted",
+        "runner": "default",
+        "expected_status": "sealed"
+      },
+      {
+        "name": "stop_no_action_items",
+        "runner": "default",
+        "expected_status": "failure"
+      }
+    ],
+    "receipt_ids": [
+      "sha256:f7acff4a02f77cd09c6d9da576fe58293534c3d6b635408c469bc77d27e03ef7",
+      "sha256:c0c9c09cf70a8e8df5a6c31a5cb59780efeb468874545e2d93908b911c9433e5"
+    ],
+    "evidence_url": "https://runx.ai/x/armstrongsam25/meeting-followup@sha-b66fb56c9dfe#harness",
+    "latest_run_id": "runx-harness:armstrongsam25/meeting-followup:sha-b66fb56c9dfe",
+    "latest_run_timestamp": "2026-07-05T23:01:45.849Z"
+  },
+  "dogfood_receipt": {
+    "receipt_id": "sha256:6ce2d339d5fdd3eadba56af66bd986235a5ecba16407d6821f3c2637f2a5420d",
+    "run_id": "run_default_daa19d8eb756",
+    "status": "sealed",
+    "verification": {
+      "valid": true,
+      "digest_status": "valid",
+      "content_address_status": "valid",
+      "signature_status": "valid",
+      "signature_mode": "production",
+      "signature_kid": "runx-demo-key",
+      "signature_alg": "Ed25519"
+    },
+    "closure": {
+      "disposition": "closed",
+      "reason_code": "process_closed",
+      "closed_at": "2026-07-05T23:07:11.100Z"
+    }
+  },
+  "pr": {
+    "url": "https://github.com/runxhq/runx/pull/249",
+    "number": 249,
+    "title": "Add meeting-followup skill",
+    "head": "armstrongsam25:skill/meeting-followup",
+    "base": "main",
+    "repo": "runxhq/runx"
+  },
+  "source_repo": {
+    "url": "https://github.com/armstrongsam25/runx-meeting-followup-skill",
+    "owner": "armstrongsam25",
+    "name": "runx-meeting-followup-skill",
+    "default_branch": "master"
+  },
+  "registry_provenance": {
+    "digest": "sha256:07d7e1813fada9cd256eac49451f25a339dd4ac3cb79571d1a6800e0f07c7e02",
+    "profile_digest": "sha256:bde9060a7b034627a5d28247292f6ca4d5deabc695039931cb80b72d4a6b20b9",
+    "registry_key_id": "runx-registry-ed25519-v1",
+    "registry_source": "remote https://api.runx.ai",
+    "trust_state": "trusted",
+    "trust_tier": "community"
+  },
+  "runx_cli_version": "0.6.16"
+}

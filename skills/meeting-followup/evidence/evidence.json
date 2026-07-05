@@ -1,0 +1,50 @@
+{
+  "bounty": 76,
+  "summary": "Published the meeting-followup runx skill to GitHub and the hosted registry, opened PR #249 against runxhq/runx, ran a dogfood invocation from the hosted registry that sealed successfully with 2 action items, verified the receipt, and assembled full evidence for Frantic bounty #76.",
+  "observations": [
+    "The skill was published to the hosted runx registry at armstrongsam25/meeting-followup with version sha-b66fb56c9dfe and harness status passed (2/2 cases).",
+    "Both harness cases passed on the hosted registry: sealed_action_items_extracted (expected status sealed) and stop_no_action_items (expected status failure).",
+    "The standalone source repository was created at https://github.com/armstrongsam25/runx-meeting-followup-skill and pushed to the master branch.",
+    "A pull request was opened against runxhq/runx at https://github.com/runxhq/runx/pull/249 on branch skill/meeting-followup targeting main.",
+    "The dogfood invocation from the hosted registry returned status sealed with exit_code 0 and extracted 2 action items (Alice: send proposal by Friday, Bob: review budget by EOW), both resolved to due_date 2026-07-10.",
+    "The sealed receipt sha256:6ce2d339d5fdd3eadba56af66bd986235a5ecba16407d6821f3c2637f2a5420d was verified with runx verify --receipt --json: valid true, digest valid, content_address valid, signature valid (Ed25519, kid runx-demo-key).",
+    "The skill is read-only and side-effect free: it parses meeting notes into structured action_items and never writes to a task tracker, calendar, or messaging tool, satisfying the ops category safety boundary.",
+    "runx CLI version 0.6.16 was used for all publish, run, and verify operations."
+  ],
+  "dogfood": {
+    "command": "npx runx skill armstrongsam25/meeting-followup@sha-b66fb56c9dfe --registry https://api.runx.ai --input-json meeting='{\"notes\":\"@alice will send the proposal by Friday. @bob needs to review the budget by EOW.\",\"meeting_date\":\"2026-07-05\"}' --json",
+    "status": "sealed",
+    "exit_code": 0,
+    "receipt_id": "sha256:6ce2d339d5fdd3eadba56af66bd986235a5ecba16407d6821f3c2637f2a5420d",
+    "run_id": "run_default_daa19d8eb756",
+    "skill_name": "meeting-followup",
+    "registry_source": "remote https://api.runx.ai",
+    "version": "sha-b66fb56c9dfe",
+    "trust_state": "trusted",
+    "trust_tier": "community",
+    "payload": {
+      "summary": "@alice will send the proposal by Friday. @bob needs to review the budget by EOW.",
+      "action_item_count": 2,
+      "action_items": [
+        {
+          "description": "@alice will send the proposal by Friday.",
+          "owner": "Alice",
+          "due_date": "2026-07-10",
+          "priority": "medium"
+        },
+        {
+          "description": "@bob needs to review the budget by EOW.",
+          "owner": "Bob",
+          "due_date": "2026-07-10",
+          "priority": "medium"
+        }
+      ]
+    },
+    "closure": {
+      "closed_at": "2026-07-05T23:07:11.100Z",
+      "disposition": "closed",
+      "reason_code": "process_closed",
+      "summary": "cli-tool default completed"
+    }
+  }
+}
